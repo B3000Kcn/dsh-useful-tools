@@ -1,0 +1,45 @@
+# Public plugin files only. Unlisted files stay local, including secrets,
+# environment/agent/IDE settings, backups, tests, development scripts, caches,
+# logs, source maps, dependency trees, archives and checksum files.
+# Add new plugin files explicitly rather than allowing an entire directory.
+*
+
+!/.gitignore
+!/README.md
+!/LICENSE
+!/package.json
+!/index.js
+!/cordis.patch.yml
+
+!/locale/
+!/locale/en.json
+!/locale/zh.json
+
+!/dist/
+!/dist/client.js
+
+!/src/
+!/src/styles.css
+!/src/client/
+!/src/client/index.js
+!/src/client/session-titles/
+!/src/client/session-titles/catalog.js
+!/src/client/session-titles/dialog.js
+!/src/client/session-titles/overlay.js
+!/src/client/session-titles/status.js
+!/src/client/session-titles/transport.js
+!/src/settings/
+!/src/settings/index.js
+!/src/settings/session-titles.js
+!/src/host/
+!/src/host/config.js
+!/src/host/routes.js
+!/src/host/title-control.js
+!/src/host/session-titles/
+!/src/host/session-titles/component.js
+!/src/host/session-titles/engine.js
+!/src/host/session-titles/generator.js
+!/src/host/session-titles/input.js
+!/src/host/session-titles/locale/
+!/src/host/session-titles/locale/en.json
+!/src/host/session-titles/locale/zh.json

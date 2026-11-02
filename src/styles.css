@@ -1,0 +1,34 @@
+.dsh-useful-tools-page { color: var(--dsw-alias-label-primary); }
+.dsh-useful-tools-page p { color: var(--dsw-alias-label-secondary); line-height: 1.5; }
+.dsh-useful-tools-page fieldset { display: grid; gap: 14px; border: 0; padding: 0; margin: 16px 0; }
+.dsh-useful-tools-page button, .dsh-useful-tools-page select {
+  color: var(--dsw-alias-label-primary); background: var(--dsw-alias-fill-layer-2, transparent);
+  border: 1px solid var(--dsw-alias-border-l4); border-radius: var(--dsw-radius-lg, 8px); padding: 8px 12px;
+}
+.dsh-useful-tools-page button:disabled, .dsh-useful-tools-page fieldset:disabled { opacity: .55; }
+.dsh-useful-tools-component { display: flex; width: 100%; align-items: center; justify-content: space-between; text-align: left; cursor: pointer; }
+.dsh-useful-tools-component strong, .dsh-useful-tools-component small { display: block; }
+.dsh-useful-tools-component small { margin-top: 4px; color: var(--dsw-alias-label-secondary); }
+.dsh-useful-tools-setting { display: grid; gap: 7px; }
+.dsh-useful-tools-setting select { width: 100%; }
+.dsh-useful-tools-setting-actions { display: flex; gap: 8px; }
+.dsh-useful-tools-back { cursor: pointer; }
+.dsh-useful-tools-rename-field { position: relative; }
+.dsh-useful-tools-rename-input {
+  box-sizing: border-box; width: 100%; height: 44px; padding: 7px 45px 7px 14px;
+  border: .5px solid var(--dsw-alias-border-l4); border-radius: var(--dsw-radius-lg);
+  outline: none; background: transparent; color: var(--dsw-alias-label-primary);
+  font-size: 14px; font-weight: 400; line-height: 22px;
+}
+.dsh-useful-tools-rename-input:disabled { color: var(--dsw-alias-label-dimmed); }
+.dsh-useful-tools-rename-generate {
+  position: absolute; right: 7px; top: 50%; transform: translateY(-50%); display: grid; place-items: center;
+  width: 32px; height: 32px; border: 0; border-radius: 7px; cursor: pointer; background: transparent;
+  color: var(--dsw-alias-label-secondary);
+}
+.dsh-useful-tools-rename-generate:not(:disabled):hover { background: var(--dsw-alias-interactive-bg-hover); color: var(--dsw-alias-label-primary); }
+.dsh-useful-tools-rename-generate:focus-visible { outline: 2px solid var(--dsw-alias-link); outline-offset: 1px; }
+.dsh-useful-tools-rename-generate:disabled { opacity: .5; cursor: default; }
+.dsh-useful-tools-rename-status, .dsh-useful-tools-rename-error { margin-top: 8px; font-size: 12px; line-height: 18px; }
+.dsh-useful-tools-rename-status { color: var(--dsw-alias-label-secondary); }
+.dsh-useful-tools-rename-error { color: var(--dsw-alias-state-error-primary); }

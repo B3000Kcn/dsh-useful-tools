@@ -1,0 +1,12 @@
+# The root runs the official provider while the component is off.  If the root
+# itself is disabled, let the original row run; removing this bundle likewise
+# removes the override. parent.data is the complete composed sibling list,
+# including on the first Loader pass before the root Entry is constructed.
+- id: session-title-llm
+  disabled: !!js "(() => { const official = [...ctx.loader.entries()].find(entry => entry.options.id === 'session-title-llm' && entry.options.name === '@deepseek-ai/dsh-session-title-first-prompt-llm'); const root = official?.parent.data.find(row => row.id === 'dsh-useful-tools' && row.name === 'dsh-useful-tools'); if (!root) return false; const value = root.disabled; const rootEntry = [...ctx.loader.entries()].find(entry => entry.parent === official.parent && entry.options.id === root.id); return !(value && typeof value === 'object' && '__jsExpr' in value ? (rootEntry ?? official).evaluate(value.__jsExpr) : value); })()"
+
+- insert:
+    - id: dsh-useful-tools
+      name: dsh-useful-tools
+    - id: dsh-useful-tools-session-titles
+      name: dsh-useful-tools/session-titles
